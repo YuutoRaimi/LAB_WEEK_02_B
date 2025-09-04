@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background_screen"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ResultActivity"
-    android:id="@+id/background_screen">
+    android:layout_height="match_parent">
+
     <TextView
         android:id="@+id/color_code_result_message"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Color code applied"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BACK"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#6200EE"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:minHeight="56dp"
+        app:layout_constraintTop_toBottomOf="@id/color_code_result_message"
         app:layout_constraintBottom_toBottomOf="parent"
-        style="@style/text_display"
-        android:textColor="@color/white"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
