@@ -17,7 +17,6 @@ class ResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_result)
 
         if (intent != null) {
-            // ✅ Ambil langsung pakai string key (harus sama dengan yang di MainActivity)
             val colorCode = intent.getStringExtra("COLOR_KEY")
 
             val backgroundScreen = findViewById<ConstraintLayout>(R.id.background_screen)
@@ -39,7 +38,6 @@ class ResultActivity : AppCompatActivity() {
             )
         }
 
-        // ✅ Back button: cukup finish() biar balik ke MainActivity
         val backButton = findViewById<Button>(R.id.back_button)
         backButton.setOnClickListener {
             finish()
