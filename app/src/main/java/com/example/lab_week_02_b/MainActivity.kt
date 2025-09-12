@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
         private const val ERROR_KEY = "ERROR_KEY"
     }
 
-    // ✅ Deklarasi startForResult
     private val startForResult =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { activityResult ->
             val data: Intent? = activityResult.data
@@ -49,8 +48,6 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     val resultIntent = Intent(this, ResultActivity::class.java)
                     resultIntent.putExtra(COLOR_KEY, colorCode)
-
-                    // ✅ Pakai startForResult
                     startForResult.launch(resultIntent)
                 }
             } else {
